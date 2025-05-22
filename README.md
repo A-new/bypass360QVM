@@ -5,7 +5,7 @@
 
 **改进：**
 
-1、减小了生成的图标的扰动，基本肉眼分辨不出区别（方便钓鱼用）
+1、减小了生成的图标的扰动，与母版图标肉眼基本分辨不出区别（方便钓鱼用）
 
 2、添加的随机版本信息中文件描述、公司名称、文件名等有一定可读性
 
@@ -16,3 +16,19 @@ python 360QVM.py <exe文件> <生成数量>
 ```
 
 ![image](https://github.com/user-attachments/assets/f1dc2303-1f27-4d78-89a6-429464f30923)
+
+**文件说明：**
+
+**char_company.pkl**和**word_company.pkl**是基于**kaggle**的[7+ Million Company Dataset](https://www.kaggle.com/datasets/peopledatalabssf/free-7-million-company-dataset?select=companies_sorted.csv)筛选出来的科技软件公司名为语料生成的马尔可夫模型（Markov Model）
+
+**lda_dict.pkl**和**lda_model.pkl**以及**file_description_model.json**是基于Win11系统目录PE文件的文件描述为语料生成的LDA主题模型和马尔可夫模型（Markov Model）
+
+**file_name.pkl**是基于我电脑上所有exe文件名为语料的马尔可夫模型（Markov Model）
+
+**其他：**
+
+做成模型是为了生成的时候加速Markov Model不能增量训练，大家可以自行搜集一个大的语料库再次训练。
+
+LDA主题模型可以增量训练。
+
+train目录里的脚本是上面三部分模型的训练脚本，其中train_file_description_models.py是文件描述训练的LDA主题模型可以直接用来增量训练。
