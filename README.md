@@ -1,6 +1,7 @@
 # bypass360QVM
 
 添加图标以及版本信息，实现自动化bypass360QVM
+
 主要逻辑参考了大佬T4y1oR的https://github.com/T4y1oR/RingQ/tree/main/QVM250
 
 **改进：**
