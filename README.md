@@ -2,6 +2,7 @@
 
 添加图标以及版本信息，实现自动化bypass360QVM
 主要逻辑参考了大佬T4y1oR的https://github.com/T4y1oR/RingQ/tree/main/QVM250
+
 **改进：**
 1、减小了生成的图标的扰动，基本肉眼分辨不出区别（方便钓鱼用）
 
