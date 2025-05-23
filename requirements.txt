@@ -1,0 +1,6 @@
+markovify>=0.9.4
+Pillow>=9.0.0
+gensim>=4.0.0
+tqdm>=4.60.0
+jieba>=0.42.1
+spacy>=3.0.0 
