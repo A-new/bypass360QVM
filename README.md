@@ -12,6 +12,12 @@
 
 **使用方法：**
 
+首先安装依赖库
+
+```bat
+python -m pip install -r requirements.txt
+```
+
 ```bat
 python 360QVM.py <exe文件> <生成数量>
 ```
@@ -33,6 +39,8 @@ python 360QVM.py <exe文件> <生成数量>
 LDA主题模型可以增量训练。
 
 train目录里的脚本是上面三部分模型的训练脚本，其中train_file_description_models.py是文件描述训练的LDA主题模型可以直接用来增量训练。
+
+注意，训练用到了 spaCy 的英文模型 en_core_web_sm 需要安装  python -m spacy download en_core_web_sm，不训练这个就不用装了，这个有点大也可以手动[下载whl包](https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl)安装
 
 免杀效果大家自测吧，我就不王婆卖瓜了。
 
